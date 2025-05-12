@@ -65,7 +65,7 @@ if __name__ == "__main__":
     model = ModelParams(parser, sentinel=True)
     pipeline = PipelineParams(parser)
     parser.add_argument("--iteration", default=-1, type=int)
-    parser.add_argument("--skip_train", action="store_true")
+    parser.add_argument("--skip_train", action="store_true") # action="store_true": 没有前面参数出现时是 False，出现时变 True; action="store_false": 没有前面参数出现时是 True，出现时变 False
     parser.add_argument("--skip_test", action="store_true")
     parser.add_argument("--quiet", action="store_true")
     args = get_combined_args(parser)
