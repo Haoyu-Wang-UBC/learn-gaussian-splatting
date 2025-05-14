@@ -267,7 +267,7 @@ if __name__ == "__main__":
     parser.add_argument('--disable_viewer', action='store_true', default=False)
     parser.add_argument("--checkpoint_iterations", nargs="+", type=int, default=[])
     parser.add_argument("--start_checkpoint", type=str, default = None)
-    args = parser.parse_args(sys.argv[1:])
+    args = parser.parse_args(sys.argv[1:]) # sys.argv 是一个列表，表示从命令行传给 Python 脚本的所有参数. sys.argv[1:] 去掉第一个元素（也就是脚本名），只保留后面的实际参数. args是一个Namespace类的对象。
     args.save_iterations.append(args.iterations)
     
     print("Optimizing " + args.model_path)
