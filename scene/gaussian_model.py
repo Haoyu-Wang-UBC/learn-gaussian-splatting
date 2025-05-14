@@ -52,13 +52,13 @@ class GaussianModel:
         self.optimizer_type = optimizer_type
         self.max_sh_degree = sh_degree  
         self._xyz = torch.empty(0)
-        self._features_dc = torch.empty(0)
-        self._features_rest = torch.empty(0)
+        self._features_dc = torch.empty(0) # 0阶球谐系数，也就是基底颜色值。
+        self._features_rest = torch.empty(0) # 1 阶及以上的球谐系数。
         self._scaling = torch.empty(0)
         self._rotation = torch.empty(0)
         self._opacity = torch.empty(0)
-        self.max_radii2D = torch.empty(0)
-        self.xyz_gradient_accum = torch.empty(0)
+        self.max_radii2D = torch.empty(0) # 每个粒子在图像空间最大半径。
+        self.xyz_gradient_accum = torch.empty(0) 
         self.denom = torch.empty(0)
         self.optimizer = None
         self.percent_dense = 0
